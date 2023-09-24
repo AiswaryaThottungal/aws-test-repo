@@ -3,9 +3,12 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
+import { Button } from "../styles/Button";
+
 
 const Nav = () => {
   const [drawer, setDrawer] = useState();
+  
 
   const Nav = styled.nav`
     .navbar-lists {
@@ -125,7 +128,7 @@ const Nav = () => {
         opacity: 0;
         transform: translateX(100%);
         /* transform-origin: top; */
-        transition: all 3s linear;
+        transition: all 1s linear;
       }
 
       .active .navbar-lists {
@@ -199,6 +202,12 @@ const Nav = () => {
               onClick={() => setDrawer(false)}>
               Contact
             </NavLink>
+          </li>
+          <li>
+            <NavLink to="/login" className="navbar-link">
+              <Button> Login</Button>
+            </NavLink>
+            
           </li>
           <li>
             <NavLink to="/cart" className="navbar-link cart--link">

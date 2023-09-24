@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import Carousel from './components/Carousel';
+import { banner } from './components/CarouselData';
 
 const Home = () => {
-  return <Wrapper className="test">Home</Wrapper>;
+  return <Carousel images={banner} />
 };
 
-const Wrapper = styled.section`
-  height: 100vh;
-  background-color: ${({ theme }) => theme.colors.bg};
-`;
+
 
 export default Home;
