@@ -116,12 +116,13 @@ ${"" /* resuable code section  */}
       font-weight: 600;
       margin-bottom: 6rem;
       text-transform: capitalize;
+      color: ${({ theme }) => theme.colors.primary};
     }
 
      .intro-data {
       margin-bottom: 0;
       text-transform: uppercase;
-      color: #5138ee;
+      color: ${({ theme }) => theme.colors.secondary};
     }
 
    .caption {

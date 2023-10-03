@@ -5,8 +5,9 @@ export const Button = styled.button`
   max-width: auto;
   background-color:${({ theme }) => theme.colors.helper};
   color: rgb(255 255 255);
-  padding: 1.4rem 2.4rem;
+  padding: 1.2rem 2.2rem;
   border: none;
+  border-radius: 3rem;
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;

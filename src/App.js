@@ -24,7 +24,7 @@ const App = () => {
       primary: "#031926",
       secondary:"#468189",
       subtle:"#9DBEBB",
-
+      shading:"#d8ebeb",
       bg: "#F6F8FA",
       footer_bg: "#0a1435",
       btn: "rgb(98 84 243)",

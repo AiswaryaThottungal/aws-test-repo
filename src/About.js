@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const AboutWrapper = styled.div`
     color:'rgb(40, 35, 35)';
     text-align :'center';
@@ -28,7 +29,9 @@ const AboutWrapper = styled.div`
       }
     }
 `;
+
 const About = () => {
+  
   return (
     <AboutWrapper>
       <div>

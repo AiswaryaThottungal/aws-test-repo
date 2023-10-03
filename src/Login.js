@@ -14,7 +14,7 @@ const Login = () => {
         align-items: center;
         justify-content: center;
     .login-form{
-        padding: 20px;
+        padding: 40px;
         background-color: white;
         border-style: solid;
         border-color: #9DBEBB;
