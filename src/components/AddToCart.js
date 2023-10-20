@@ -1,25 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useState } from 'react';
-import CartAmountToggle from "./CartAmountToggle";
+import CartQuantityToggle from "./CartQuantityToggle";
 import { NavLink } from "react-router-dom";
 import { Button } from "../styles/Button";
-//import { useCartContext } from "../context/cart_context";
+import { useCartContext } from "../context/CartContext";
 
 const AddToCart = ({product}) => {
-  //const { addToCart } = useCartContext();
+  const { addToCart } = useCartContext();
 
   const { id, size, stock } = product;
 
   const [currentsize, setCurrentSize] = useState(size[0]);  
-  const [amount, setAmount] = useState(1);
+  const [quantity, setQuantity] = useState(1);
 
   const setDecrease = () => {    
-    amount > 1 ? setAmount(amount - 1) : setAmount(1);
+    quantity > 1 ? setQuantity(quantity - 1) : setQuantity(1);
   };
 
   const setIncrease = () => {
-    amount < stock ? setAmount(amount + 1) : setAmount(stock);
+    quantity < stock ? setQuantity(quantity + 1) : setQuantity(stock);
   };
 
 
@@ -44,13 +44,13 @@ const AddToCart = ({product}) => {
         </p>
       </div>
         {/* add to cart  */}
-      <CartAmountToggle
-        amount={amount}
+      <CartQuantityToggle
+        quantity={quantity}
         setDecrease={setDecrease}
         setIncrease={setIncrease}
       />
 
-      <NavLink to="/cart" >
+      <NavLink to="/cart" onClick={() => addToCart(id,currentsize,quantity,product)}>
         <Button className="btn">Add To Cart</Button>
       </NavLink>
     </Wrapper>
@@ -88,26 +88,7 @@ const Wrapper = styled.section`
     color: #fff;
   }
 
-  /* we can use it as a global one too  */
-  .amount-toggle {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.4rem;
-
-    button {
-      border: none;
-      background-color: #fff;
-      cursor: pointer;
-    }
-
-    .amount-style {
-      font-size: 2.4rem;
-      color: ${({ theme }) => theme.colors.btn};
-    }
-  }
+  
 `;
 
 export default AddToCart;
