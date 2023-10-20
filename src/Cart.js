@@ -47,7 +47,7 @@ const Cart = () => {
           <div className='order-total--subdata'>
             <div>
               <p>Order Total: </p>
-              {/* <p> <FormatPrice price={total_price}/> </p> */}
+              <p> <FormatPrice price={total_price}/> </p>
             </div>
             
           </div>

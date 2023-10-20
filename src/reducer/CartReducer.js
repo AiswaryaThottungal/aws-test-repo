@@ -5,7 +5,7 @@ const CartReducer = (state,action) => {
     switch (action.type){
         case "ADD_TO_CART":
             let {id,size,quantity,product} = action.payload;
-            let existingProduct = state.cart.find((currentItem)=> currentItem.id == id + size);
+            let existingProduct = state.cart.find((currentItem)=> currentItem.id === id + size);
             console.log("🚀 ~ file: CartReducer.js:8 ~ CartReducer ~ existingProduct:", existingProduct)
             if(existingProduct){
                 let updatedCart = state.cart.map((currentItem) =>{
