@@ -50,7 +50,7 @@ const CartContextProvider = ({children}) => {
     //adding and retrieving data to and from localstorage
 
     useEffect(() =>{       
-        dispatch({ type: "CART_ITEM_PRICE_TOTAL" });
+        //dispatch({ type: "CART_ITEM_PRICE_TOTAL" });
         localStorage.setItem("trayaCart",JSON.stringify(state.cart))
     },[state.cart]);
   
