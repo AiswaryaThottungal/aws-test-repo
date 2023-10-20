@@ -90,15 +90,15 @@
         "images":[
             {
                 "id":"saaya-blue1",
-                "src":"../images/ProductImages/cottonblue1.JPG"
+                "src":"../images/ProductImages/cottonblue1.jpg"
             },
             {
                 "id":"saaya-blue2",
-                "src":"../images/ProductImages/cottonblue2.JPG"
+                "src":"../images/ProductImages/cottonblue2.jpg"
             },
             {
                 "id":"saaya-blue3",
-                "src":"../images/ProductImages/cottonblue3.JPG"
+                "src":"../images/ProductImages/cottonblue3.jpg"
             }
         ],  
         "featured":false,
@@ -142,11 +142,11 @@
         "images":[
             {
                 "id":"bandhni1",
-                "src":"../images/ProductImages/bandhni1.jpg"
+                "src":"../images/ProductImages/bandhni1.JPG"
             },
             {
                 "id":"bandhni2",
-                "src":"../images/ProductImages/bandhni2.jpg"
+                "src":"../images/ProductImages/bandhni2.JPG"
             }            
         ],  
         "featured":true,
